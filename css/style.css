@@ -1,0 +1,200 @@
+:root {
+    color-scheme: dark;
+    --bg: #04070f;
+    --panel: rgba(10, 16, 32, 0.95);
+    --text: #f3f8ff;
+    --muted: #9fb0c9;
+    --accent: #60d9c9;
+    --accent-2: #6f82ff;
+    --border: rgba(96, 217, 201, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: radial-gradient(circle at top left, rgba(111, 130, 255, 0.18), transparent 24%), linear-gradient(135deg, #03060c 0%, #07111d 45%, #04070f 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    background: rgba(3, 7, 14, 0.94);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e4ecf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+section {
+    padding: 4.5rem 0;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    margin-bottom: 1.3rem;
+    color: #7fe4da;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #a9e7e0;
+    margin-bottom: 0.7rem;
+}
+
+.hero {
+    padding: 7rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(7, 10, 20, 0.96), rgba(8, 13, 28, 0.96));
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 16px 36px rgba(96, 217, 201, 0.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.about {
+    background: rgba(8, 12, 22, 0.9);
+}
+
+.about p {
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.service-card p {
+    color: var(--muted);
+}
+
+.contact {
+    background: linear-gradient(135deg, rgba(5, 9, 18, 0.97), rgba(2, 6, 14, 0.97));
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-grid > div {
+    min-width: 180px;
+    text-align: left;
+}
+
+.contact a {
+    color: #f3f9ff;
+    text-decoration: none;
+}
+
+footer {
+    padding: 1.4rem 0 2rem;
+    text-align: center;
+    color: var(--muted);
+    background: rgba(2, 4, 10, 0.95);
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
